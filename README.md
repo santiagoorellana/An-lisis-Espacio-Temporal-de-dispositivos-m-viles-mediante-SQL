@@ -8,20 +8,20 @@ En el presente trabajo se proponen funciones SQL que permiten realizar comparaci
 <h2>Análisis Espacio-Temporal propuesto</h2>
 <p>Es importante conocer que las Lecturas de las señales que transmiten los dispositivos móviles pueden ser clasificadas como:</p>
 
-•	Provocadas: Cuando el sistema de monitoreo decide en que momento leer la señal, lo cual supone que la señal está disponible en cada instante.
-•	Eventuales: Cuando el sistema de monitoreo lee la señal solamente cuando esta aparece.
+<li><b>Provocadas</b>: Cuando el sistema de monitoreo decide en que momento leer la señal, lo cual supone que la señal está disponible en cada instante.</li>
+<li><b>Eventuales</b>: Cuando el sistema de monitoreo lee la señal solamente cuando esta aparece.</li>
 
 <p>Las lecturas pueden durar fracciones de segundos o ser prolongadas en el tiempo hasta varios minutos. Para realizar un análisis espacio-temporal de las lecturas de los sistemas de monitoreo, se necesitan al menos:</p>
 
-•	Identificación: (Quién) Cadena o número que identifica al dispositivo.
-•	Tiempo: (Cuando) Fecha y hora de la lectura. También se puede utilizar la duración.
-•	Espacio: (Donde) Coordenadas o nombre del emplazamiento del Sistema de Monitoreo.
+<li><b>Identificación</b>: (Quién) Cadena o número que identifica al dispositivo.</li>
+<li><b>Tiempo</b>: (Cuando) Fecha y hora de la lectura. También se puede utilizar la duración.</li>
+<li><b>Espacio</b>: (Donde) Coordenadas o nombre del emplazamiento del Sistema de Monitoreo.</li>
 
 <p>Se necesita además almacenar las lecturas en una Base de Batos, en la cual se encuentre una tabla de lecturas, que debe tener al menos tres campos para la Identificación del dispositivo y las componentes Temporal y Espacial, siendo cada registro de esta tabla una lectura realizada por el sistema de monitoreo. Luego sobre la Base de Datos se podrán realizar los siguientes análisis espaciotemporales de interés:</p>
 
-•	Análisis de presencia: Permite conocer qué dispositivos estuvieron en un lugar específico a una fecha y hora específica. 
-•	Análisis de ubicación: Para conocer los lugares en los que ha estado un dispositivo.
-•	Análisis de coincidencias: Permite encontrar las coincidencias entre dispositivos a partir del lugar, fecha y hora. Es decir, que dado un dispositivo A, muestra los dispositivos que han estado junto con A en el mismo lugar y al mismo tiempo. Se pueden buscar coincidencias entre dos dispositivos o entre grupos de dispositivos. También se pueden buscar todas las coincidencias de un determinado dispositivo con respecto a todos los de la base de datos. 
+<li><b>Análisis de presencia</b>: Permite conocer qué dispositivos estuvieron en un lugar específico a una fecha y hora específica. </li>
+<li><b>Análisis de ubicación</b>: Para conocer los lugares en los que ha estado un dispositivo.</li>
+<li><b>Análisis de coincidencias</b>: Permite encontrar las coincidencias entre dispositivos a partir del lugar, fecha y hora. Es decir, que dado un dispositivo A, muestra los dispositivos que han estado junto con A en el mismo lugar y al mismo tiempo. Se pueden buscar coincidencias entre dos dispositivos o entre grupos de dispositivos. También se pueden buscar todas las coincidencias de un determinado dispositivo con respecto a todos los de la base de datos. </li>
 
 <p>En la implementación de los análisis espaciotemporales inciden situaciones propias de los fenómenos de la vida real, por ejemplo: Dos lecturas realizadas en un mismo lugar por diferentes Sistemas de Monitoreo no tienen necesariamente las mismas coordenadas. También sucede que si un dispositivo emite una señal y otro dispositivo cercano le contesta con otra señal, las lecturas de ambas señales tendrán tiempos diferentes, y esto puede conducir a interpretar erróneamente que los dispositivos no han coincidido en el tiempo. 
 Teniendo en cuenta esto, la implementación del análisis espaciotemporal debe realizar comparaciones aproximadas, que utilicen umbrales de tolerancia establecidos por el usuario. Por ejemplo: Si dos lecturas tienen coordenadas separadas por una distancia inferior o igual a 20 metros, puede asumirse que están en el mismo lugar o área. También se aplica con el tiempo de las lecturas, al asumir que dos dispositivos han coincidido en el mismo espacio y tiempo, si la diferencia temporal entre la detección de de las señales de ambos es inferior o igual a 5 minutos.
@@ -100,4 +100,8 @@ Otra operación de análisis de coincidencia espacio-temporal es contar las coin
 También es importante resaltar que, las consultas han sido presentadas en su expresión más simple, pero es posible aumentar la cantidad de campos a mostrar y hacer más complejas las condiciones de filtrado y hacer prefiltrado cuando se trabaje con bases de datos muy extensas. 
 Dada la complejidad de las consultas presentadas y de las que se deriven de estas, lo más razonable podría ser la implementación de un programa especializado en el análisis espacio-temporal de las bases de datos, mediante el cual el usuario pueda realizar las consultas de manera sencilla, mediante un formulario que le facilite la introducción y validación de parámetros tales como coordenadas geográficas, fechas, horas y listas de dispositivos.
 Al utilizar las consultas, es importante que se tenga cuidado en la selección de los umbrales de tolerancia, que deben estar en correspondencia principalmente con los niveles de precisión del sistema de monitoreo y con la cantidad de lecturas por unidades de tiempo.</p>
+
+<h2>Implementación</h2>
+La implementación SQL de las funciones y procedimientos almacenados que se utilizan para realizar las pruebas con las consultas presentadas anteriormente, estan contenidos en el fichero "localizaciones.sql"
+
 
