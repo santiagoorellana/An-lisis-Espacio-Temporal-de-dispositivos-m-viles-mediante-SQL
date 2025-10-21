@@ -49,22 +49,20 @@ En el presente trabajo se proponen funciones SQL que permiten realizar comparaci
 
 <p>Con el objetivo de probar la implementación de los análisis espaciotemporales de interés, la tabla fue llenada con varias lecturas ficticias, supuestamente realizadas en diferentes lugares de Alamar y Bacuranao, en el municipio Habana del Este. Los dispositivos son ficticios y los datos fueron seleccionados con mucho cuidado, teniendo en cuenta además que las coordenadas sean coherentes con los nombres de los lugares declarados. Para las comparaciones aproximadas se implementaron dos funciones SQL que se describen a continuación:</p>
 
-Nombre de función: minutos_entre
-Parámetros de entrada: 
-FT1: Fecha y hora de A. Es un valor tipo “datetime”.
-FT2: Fecha y hora de B. Es un valor tipo “datetime”.
-Salida: Minutos de diferencia entre los dos valores de fecha y hora.
+<b>Nombre de función</b>: minutos_entre<br>
+<b>Parámetro FT1</b>: Fecha y hora de A como valor tipo “datetime”.<br>
+<b>Parámetro FT2</b>: Fecha y hora de B como valor tipo “datetime”.<br>
+<b>Salida</b>: Minutos de diferencia entre los dos valores de fecha y hora.<br>
 
  <img width="420" alt="minutos entre" src="https://github.com/user-attachments/assets/7e568f5f-fd8d-4ee1-8679-382df7047bdb" />
 <p>Figura 1. Implementación en SQL de la función llamada “minutos_entre”.</p>
 
-Nombre e función: metros_entre
-Parámetros de entrada: 
-X1: Longitud de la coordenada de A en WGS84. Es un valor tipo “double”.
-Y1: Latitud la coordenada de A en WGS84. Es un valor tipo “double”.
-X2: Longitud de la coordenada de B en WGS84. Es un valor tipo “double”.
-Y2: Latitud la coordenada de B en WGS84. Es un valor tipo “double”.
-Salida: Metros de distancia entre las coordenadas de A y B.
+<b>Nombre de función</b>: metros_entre
+<b>Parámetro X1</b>: Longitud de la coordenada de A en WGS84 como valor tipo “double”.<br>
+<b>Parámetro Y1</b>: Latitud la coordenada de A en WGS84 como valor tipo “double”.<br>
+<b>Parámetro X2</b>: Longitud de la coordenada de B en WGS84 como valor tipo “double”.<br>
+<b>Parámetro Y2</b>: Latitud la coordenada de B en WGS84 como valor tipo “double”.<br>
+<b>Salida</b>: Metros de distancia entre las coordenadas de A y B.<br>
 
 <img width="551" height="511" alt="metros entre" src="https://github.com/user-attachments/assets/8c221c00-ed85-443f-be54-faec73268559" />
 <p>Figura 2. Implementación en SQL de la función llamada “metros_entre”.</p>
