@@ -8,9 +8,10 @@ En el presente trabajo se proponen funciones SQL que permiten realizar comparaci
 <h2>Análisis Espacio-Temporal propuesto</h2>
 <p>Es importante conocer que las Lecturas de las señales que transmiten los dispositivos móviles pueden ser clasificadas como:</p>
 
+<ul>
 <li><b>Provocadas</b>: Cuando el sistema de monitoreo decide en que momento leer la señal, lo cual supone que la señal está disponible en cada instante.</li>
 <li><b>Eventuales</b>: Cuando el sistema de monitoreo lee la señal solamente cuando esta aparece.</li>
-
+</ul>
 <p>Las lecturas pueden durar fracciones de segundos o ser prolongadas en el tiempo hasta varios minutos. Para realizar un análisis espacio-temporal de las lecturas de los sistemas de monitoreo, se necesitan al menos:</p>
 
 <li><b>Identificación</b>: (Quién) Cadena o número que identifica al dispositivo.</li>
