@@ -48,7 +48,7 @@ FT1: Fecha y hora de A. Es un valor tipo “datetime”.
 FT2: Fecha y hora de B. Es un valor tipo “datetime”.
 Salida: Minutos de diferencia entre los dos valores de fecha y hora.
 
- <img width="300" alt="minutos entre" src="https://github.com/user-attachments/assets/7e568f5f-fd8d-4ee1-8679-382df7047bdb" />
+ <img width="380" alt="minutos entre" src="https://github.com/user-attachments/assets/7e568f5f-fd8d-4ee1-8679-382df7047bdb" />
 <p>Figura 1. Implementación en SQL de la función llamada “minutos_entre”.</p>
 
 Nombre e función: metros_entre
