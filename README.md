@@ -38,13 +38,14 @@ En el presente trabajo se proponen funciones SQL que permiten realizar comparaci
 <p>Para la realización de la presente investigación se implementó en una base de datos MySQL una tabla llamada “lecturas” con los siguientes campos:</p>
 
 <h2>Descripción de los campos de la tabla </h2>
-Campo	Tipo	Descripción
-numero_de_lectura	Int	 Identificador de la lectura (Campo llave)
-id_dispositivo	text	 Identificador del dispositivo.
-fecha_hora	datetime	 Fecha y hora de realización de la lectura.
-nombre_de_lugar	text	 Nombre para identificar el lugar de lectura.
-longitud	double	 Longitud de la coordenada en WGS84
-latitud	double	 Latitud de la coordenada en WGS84
+<ul>
+<li><b>numero_de_lectura	(Int)</b>:	Identificador de la lectura (Campo llave)</li>
+<li><b>id_dispositivo	(text)</b>:	Identificador del dispositivo.</li>
+<li><b>fecha_hora	(datetime)</b>:	Fecha y hora de realización de la lectura.</li>
+<li><b>nombre_de_lugar	(text)</b>:	Nombre para identificar el lugar de lectura.</li>
+<li><b>longitud	(double)</b>:	Longitud de la coordenada en WGS84</li>
+<li><b>latitud	(double)</b>:	Latitud de la coordenada en WGS84</li>
+</ul>
 
 <p>Con el objetivo de probar la implementación de los análisis espaciotemporales de interés, la tabla fue llenada con varias lecturas ficticias, supuestamente realizadas en diferentes lugares de Alamar y Bacuranao, en el municipio Habana del Este. Los dispositivos son ficticios y los datos fueron seleccionados con mucho cuidado, teniendo en cuenta además que las coordenadas sean coherentes con los nombres de los lugares declarados. Para las comparaciones aproximadas se implementaron dos funciones SQL que se describen a continuación:</p>
 
