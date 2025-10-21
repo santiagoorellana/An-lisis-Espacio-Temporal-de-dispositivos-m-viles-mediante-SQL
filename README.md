@@ -52,7 +52,7 @@ En el presente trabajo se proponen funciones SQL que permiten realizar comparaci
 <b>Nombre de función</b>: minutos_entre<br>
 <b>Parámetro FT1</b>: Fecha y hora de A como valor tipo “datetime”.<br>
 <b>Parámetro FT2</b>: Fecha y hora de B como valor tipo “datetime”.<br>
-<b>Salida</b>: Minutos de diferencia entre los dos valores de fecha y hora.<br>
+<b>Salida</b>: Minutos de diferencia entre los dos valores de fecha y hora como valor "float".<br>
 
  <img width="420" alt="minutos entre" src="https://github.com/user-attachments/assets/7e568f5f-fd8d-4ee1-8679-382df7047bdb" />
 <p>Figura 1. Implementación en SQL de la función llamada “minutos_entre”.</p>
@@ -62,7 +62,7 @@ En el presente trabajo se proponen funciones SQL que permiten realizar comparaci
 <b>Parámetro Y1</b>: Latitud la coordenada de A en WGS84 como valor tipo “double”.<br>
 <b>Parámetro X2</b>: Longitud de la coordenada de B en WGS84 como valor tipo “double”.<br>
 <b>Parámetro Y2</b>: Latitud la coordenada de B en WGS84 como valor tipo “double”.<br>
-<b>Salida</b>: Metros de distancia entre las coordenadas de A y B.<br>
+<b>Salida</b>: Metros de distancia entre las coordenadas de A y B como valor "double".<br>
 
 <img width="551" height="511" alt="metros entre" src="https://github.com/user-attachments/assets/8c221c00-ed85-443f-be54-faec73268559" />
 <p>Figura 2. Implementación en SQL de la función llamada “metros_entre”.</p>
