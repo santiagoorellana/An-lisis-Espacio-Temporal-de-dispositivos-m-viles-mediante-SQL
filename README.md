@@ -48,7 +48,7 @@ FT1: Fecha y hora de A. Es un valor tipo “datetime”.
 FT2: Fecha y hora de B. Es un valor tipo “datetime”.
 Salida: Minutos de diferencia entre los dos valores de fecha y hora.
 
- <img width="575" height="303" alt="minutos entre" src="https://github.com/user-attachments/assets/7e568f5f-fd8d-4ee1-8679-382df7047bdb" />
+ <img width="475" alt="minutos entre" src="https://github.com/user-attachments/assets/7e568f5f-fd8d-4ee1-8679-382df7047bdb" />
 <p>Figura 1. Implementación en SQL de la función llamada “minutos_entre”.</p>
 
 Nombre e función: metros_entre
@@ -68,13 +68,13 @@ Las funciones “minutos_entre” y “metros_entre” fueron almacenadas en la 
 <h2>Análisis de ubicación:</h2>
 <p>La implementación en SQL de la consulta es muy simple, ya que solamente necesita como valor de búsqueda el identificador del dispositivo. En la figura se muestran los valores de búsqueda en amarillo.</p>
 
-<img width="766" height="345" alt="ubicacion" src="https://github.com/user-attachments/assets/7b090933-589b-43af-a418-23222ce4abd5" />
+<img width="566" alt="ubicacion" src="https://github.com/user-attachments/assets/7b090933-589b-43af-a418-23222ce4abd5" />
 <p>Fingura 3. Implementación en SQL del “Análisis de ubicación”.</p>
 
 <h2>Análisis de presencia: </h2>
 <p>Esta consulta emplea las funciones “metros_entre” y “minutos_entre” para realizar las comparaciones aproximadas. Los valores de búsqueda se resaltan en amarillo y se utilizan para indicar las coordenadas del lugar, la fecha y la hora que deben tener las lecturas que se desean buscar. En el ejemplo, el valor 50 es el umbral de distancia en metros para la comparación de las coordenadas. El valor 5 es el umbral de tiempo en minutos.</p>
 
-<img width="868" height="485" alt="presencia" src="https://github.com/user-attachments/assets/ac55aa96-c5f5-4662-89f5-b2e018ef4998" />
+<img width="668" alt="presencia" src="https://github.com/user-attachments/assets/ac55aa96-c5f5-4662-89f5-b2e018ef4998" />
 <p>Figura 4. Implementación en SQL del “Análisis de presencia”.</p>
 
 <p>Este tipo de análisis espaciotemporal puede realizarse empleando el nombre de los lugares en vez de las coordenadas, pero con la desventaja de ser menos preciso. Además, se pueden dar problemas tales como que un lugar tenga más de un nombre. </p>
@@ -82,18 +82,18 @@ Las funciones “minutos_entre” y “metros_entre” fueron almacenadas en la 
 <h2>Análisis de coincidencias: </h2>
 <p>A continuación se muestra un ejemplo de la implementación del “Análisis de coincidencias entre dos dispositivos”. Los valores de búsqueda son los identificadores de los dispositivos y los umbrales de comparación aproximada.</p>
 
-<img width="906" height="484" alt="coincidencia" src="https://github.com/user-attachments/assets/7e32f490-4b62-4ebf-bfad-d7c0d1ea60c8" />
+<img width="706" alt="coincidencia" src="https://github.com/user-attachments/assets/7e32f490-4b62-4ebf-bfad-d7c0d1ea60c8" />
 <p>Figura 5. Implementación en SQL del “Análisis de coincidencia entre dos dispositivos”.</p>
 
 <p>Para el “Análisis de Coincidencias Entre Dos Grupos de Dispositivos” se podrá utilizar la misma función, pero con una modificación, tal como se muestra a continuación:</p>
 
-<img width="861" height="548" alt="coincidencia grupos" src="https://github.com/user-attachments/assets/6bf2a6f4-f4c8-4933-9c9d-52689995bb6a" />
+<img width="661" alt="coincidencia grupos" src="https://github.com/user-attachments/assets/6bf2a6f4-f4c8-4933-9c9d-52689995bb6a" />
 <p>Figura 6. Implementación SQL del “Análisis de coincidencia entre dos grupos de dispositivos”.</p>
 
 <p>En la consulta de la figura 6, se puede ver que los valores de búsqueda son dos listas de dispositivos los cuales se pasan a la consulta como dos conjuntos, por lo que se puede asumir que el “Análisis de Coincidencias Entre Dos Dispositivos” es un caso particular del “Análisis de Coincidencias Entre Dos Grupos de Dispositivos”.
 Otra operación de análisis de coincidencia espacio-temporal es contar las coincidencias de un dispositivo con respecto a todos los de la base de datos. Esta consulta solamente requiere que se le indique el identificador del dispositivo de interés y los umbrales de tolerancia espacial y temporal. Su implementación es la que se muestra seguidamente:</p>
 
-<img width="1011" height="396" alt="coincidencias conteo" src="https://github.com/user-attachments/assets/f92195e3-8edf-4b9e-8fd3-37feaacd5ed9" />
+<img width="811" alt="coincidencias conteo" src="https://github.com/user-attachments/assets/f92195e3-8edf-4b9e-8fd3-37feaacd5ed9" />
 <p>Figura 7. Implementación SQL del “Análisis de coincidencia entre un dispositivo y todos los de la base de datos”.</p>
 
 <p>La implementación de los análisis espacio-temporales mediante consultas SQL puede agilizar el trabajo de análisis, pero son muy complejas de entender para los usuarios que no tienen conocimientos profundos en el campo de la informática. Todas los operaciones anteriormente presentadas fueron implementadas como procedimientos almacenados en la base de datos MySQL, con lo cual se le ahora al usuario de la base de datos el tener que entender y escribir repetidas veces las consultas que utiliza. 
