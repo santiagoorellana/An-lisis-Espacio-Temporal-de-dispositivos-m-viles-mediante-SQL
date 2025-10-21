@@ -57,7 +57,7 @@ En el presente trabajo se proponen funciones SQL que permiten realizar comparaci
  <img width="420" alt="minutos entre" src="https://github.com/user-attachments/assets/7e568f5f-fd8d-4ee1-8679-382df7047bdb" />
 <p>Figura 1. Implementación en SQL de la función llamada “minutos_entre”.</p>
 
-<b>Nombre de función</b>: metros_entre
+<b>Nombre de función</b>: metros_entre<br>
 <b>Parámetro X1</b>: Longitud de la coordenada de A en WGS84 como valor tipo “double”.<br>
 <b>Parámetro Y1</b>: Latitud la coordenada de A en WGS84 como valor tipo “double”.<br>
 <b>Parámetro X2</b>: Longitud de la coordenada de B en WGS84 como valor tipo “double”.<br>
